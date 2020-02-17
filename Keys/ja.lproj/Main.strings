@@ -30,7 +30,7 @@
 "PCF-hf-TAS.title" = "現在の発動キー: ";
 
 /* Class = "NSTextFieldCell"; title = "If you find Keys useful, please consider sharing it on social media or blogging about it. Thank you! 🙏"; ObjectID = "Qcm-ny-hV1"; */
-"Qcm-ny-hV1.title" = "Keysが便利だと思ったら、ソーシャルメディアやブログでKeysをシェアしていただけると嬉しいです。ありがとうございます！🙏";
+"Qcm-ny-hV1.title" = "Keysが役立つと思う場合は、レビューを残すか、ソーシャルメディアで共有するか、ブログについて検討してください。 ありがとうございました！ 🙏";
 
 /* Class = "NSButtonCell"; alternateTitle = "Install"; ObjectID = "Srx-0j-A4D"; */
 "Srx-0j-A4D.alternateTitle" = "インストール";

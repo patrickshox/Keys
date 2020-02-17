@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView translatesAutoresizingMaskIntoConstraints="NO" id="1Fm-5f-QVj">
-                                <rect key="frame" x="174" y="293" width="50" height="50"/>
+                                <rect key="frame" x="174" y="301" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Q8V-w4-NRE"/>
                                     <constraint firstAttribute="width" constant="50" id="eM3-p9-6PA"/>
@@ -102,10 +102,10 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="BlankKeycap" id="0yf-LF-pXC"/>
                             </imageView>
                             <stackView wantsLayer="YES" distribution="fill" orientation="vertical" alignment="centerX" spacing="42" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLV-xE-AGT">
-                                <rect key="frame" x="0.0" y="52" width="398" height="274"/>
+                                <rect key="frame" x="0.0" y="44" width="398" height="290"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSm-hc-Al0">
-                                        <rect key="frame" x="170" y="258" width="58" height="16"/>
+                                        <rect key="frame" x="170" y="274" width="58" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="G" placeholderString="Activation Character " id="zyX-ua-QOM">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="redgreen"/>
@@ -119,7 +119,7 @@
                                         </connections>
                                     </textField>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-ZQ-T1p">
-                                        <rect key="frame" x="96" y="200" width="207" height="16"/>
+                                        <rect key="frame" x="96" y="216" width="207" height="16"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrt-JK-2FL">
                                                 <rect key="frame" x="-2" y="0.0" width="144" height="16"/>
@@ -167,7 +167,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-WV-EJV">
-                                        <rect key="frame" x="41" y="130" width="316" height="32"/>
+                                        <rect key="frame" x="41" y="146" width="316" height="32"/>
                                         <buttonCell key="cell" type="push" title="Report an Issue or Suggest an Improvement…" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Mhd-k0-cfd">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -177,7 +177,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
-                                        <rect key="frame" x="58" y="67" width="282" height="32"/>
+                                        <rect key="frame" x="58" y="83" width="282" height="32"/>
                                         <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -187,8 +187,8 @@
                                         </buttonCell>
                                     </button>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DqU-0l-bm3">
-                                        <rect key="frame" x="28" y="0.0" width="342" height="32"/>
-                                        <textFieldCell key="cell" selectable="YES" enabled="NO" refusesFirstResponder="YES" title="If you find Keys useful, please consider sharing it on social media or blogging about it. Thank you! 🙏" id="Qcm-ny-hV1">
+                                        <rect key="frame" x="28" y="0.0" width="342" height="48"/>
+                                        <textFieldCell key="cell" selectable="YES" enabled="NO" refusesFirstResponder="YES" title="If you find Keys useful, please consider leaving a review, sharing it on social media or blogging about it. Thank you! 🙏" id="Qcm-ny-hV1">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

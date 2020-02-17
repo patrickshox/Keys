@@ -30,7 +30,7 @@
 "PCF-hf-TAS.title" = "Clave de Activación Actual:";
 
 /* Class = "NSTextFieldCell"; title = "If you find Keys useful, please consider sharing it on social media or blogging about it. Thank you! 🙏"; ObjectID = "Qcm-ny-hV1"; */
-"Qcm-ny-hV1.title" = "Si encuentra útiles las claves, considere compartirlas en las redes sociales o bloguear sobre ellas. ¡Gracias! 🙏";
+"Qcm-ny-hV1.title" = "Si encuentra útiles las claves, considere dejar una reseña, compartirla en las redes sociales o bloguear sobre ella. ¡Gracias! 🙏";
 
 /* Class = "NSButtonCell"; alternateTitle = "Install"; ObjectID = "Srx-0j-A4D"; */
 "Srx-0j-A4D.alternateTitle" = "Instalar";
