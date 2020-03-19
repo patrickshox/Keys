@@ -22,11 +22,11 @@ class ViewController: NSViewController {
         customActivationKey.stringValue = defaults!.string(forKey: "activationKey")!
         secondaryLabelForCustomActivationKey.stringValue = customActivationKey.stringValue;
         // set the checkboxes state to match the user's stored preference.
-        if (defaults?.bool(forKey: "shouldStealFocus"))! {
-            focusCheckbox.state = .on
+        if (!(defaults?.bool(forKey: "shouldStealFocus") ?? true)) {
+            focusCheckbox.state = .off
         }
         else {
-            focusCheckbox.state = .off
+            focusCheckbox.state = .on
         }
         self.customActivationKey.focusRingType = NSFocusRingType.none;
         customActivationKey.customizeCursorColor(NSColor.clear)
