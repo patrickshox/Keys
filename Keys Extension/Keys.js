@@ -22,17 +22,26 @@ var permutationIndex = 0;
 var permutations;
 var scrollPositionWhenActivated;
 var preferredActivationKey;
+var shouldStealFocus;
 
+// get user's defaults/preferences.
+safari.extension.dispatchMessage("refreshPreferences")
+
+// a couple different ways to time focus stealing.
 $(document).ready(function() {
-    $(":focus").blur();
-    safari.extension.dispatchMessage("pageLoaded")
+    safari.extension.dispatchMessage("refreshPreferences")
+    if (shouldStealFocus) {
+        $(":focus").blur();
+    }
 });
-
 window.addEventListener('load', (event) => {
-    $(":focus").blur();
+    if (shouldStealFocus) {
+        $(":focus").blur();
+    }
 });
 
 $("html").on('keypress', function (activationEvent) {
+    // safari.extension.dispatchMessage("refreshPreferences")
     if (!keysCurrentlyActive && upSinceDeactivation && activationEvent.key.toUpperCase() == preferredActivationKey  && activationEvent.target.nodeName != "INPUT" && activationEvent.target.nodeName != "TEXTAREA" && !activationEvent.target.isContentEditable && !activationEvent.metaKey && !activationEvent.ctrlKey && !activationEvent.altKey && !activationEvent.altGraphKey) {
         deactivate();
         keysCurrentlyActive = true;
@@ -69,13 +78,9 @@ $("html").on('keypress', function (activationEvent) {
         io.observe(target)
         };
 
-        function run () {
-            for (var target of targets) {
-                visible(target);
-            }
+        for (var target of targets) {
+            visible(target);
         }
-
-        run();
 
         generateInputBox();
         $("#Keys-Input-Box").on('keydown', function (secondarykeys) {recordKeystrokes(secondarykeys)})
@@ -610,7 +615,7 @@ function priorSiteSpecificModifications() {
 }
 
 //stop focus stealing on bing
-if (window.location.hostname == "www.bing.com") {
+if (window.location.hostname == "www.bing.com" && shouldStealFocus) {
     $("html").on("keydown", function(focusStealingEvent){
         if (focusStealingEvent.target.nodeName != "INPUT" || keysWasActive || keysCurrentlyActive) {
             $("#sb_form_q").one("focus", function(){
@@ -685,9 +690,8 @@ $("html").on("keyup", function(){
 safari.self.addEventListener("message", handleMessage);
 
 function handleMessage(event) {
-    if (event.name == "keyIsCurrently" && event.message.currentKey != "Default key couldn't be read") {
-        preferredActivationKey = event.message.currentKey;
-    }
+    shouldStealFocus = event.message.shouldStealFocus;
+    preferredActivationKey = event.message.currentKey;
 }
 
 function resetAllInputValues() {

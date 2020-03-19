@@ -4,14 +4,30 @@ import SafariServices.SFSafariApplication
 let defaults = UserDefaults.init(suiteName: SharedUserDefaults.suiteName)
 
 class ViewController: NSViewController {
-    @IBOutlet var appNameLabel: NSTextField!
     @IBAction func reportPressed(_ sender: NSButton) {
         NSWorkspace.shared.open(NSURL(string: "https://github.com/patrickshox/Keys/issues")! as URL)
     }
+    @IBOutlet var focusCheckbox: NSButton!
+    @IBAction func focusCheckboxPressed(_ sender: Any) {
+        if focusCheckbox!.state == .on {
+            defaults?.set(true, forKey: "shouldStealFocus")
+        }
+        else {
+            defaults?.set(false, forKey: "shouldStealFocus")
+        }
+    }
     override func viewDidAppear() {
         defaults!.register(defaults: ["activationKey" : "G"])
+        // set the keycap's label and the label adjacent to the reset button to match the user's stored preference.
         customActivationKey.stringValue = defaults!.string(forKey: "activationKey")!
         secondaryLabelForCustomActivationKey.stringValue = customActivationKey.stringValue;
+        // set the checkboxes state to match the user's stored preference.
+        if (defaults?.bool(forKey: "shouldStealFocus"))! {
+            focusCheckbox.state = .on
+        }
+        else {
+            focusCheckbox.state = .off
+        }
         self.customActivationKey.focusRingType = NSFocusRingType.none;
         customActivationKey.customizeCursorColor(NSColor.clear)
         customActivationKey.currentEditor()?.selectedRange = NSMakeRange(0, 0)

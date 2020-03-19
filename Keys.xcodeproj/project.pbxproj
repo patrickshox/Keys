@@ -116,14 +116,14 @@
 		CBA443ED235E4D94006FB35A /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				CBD0C3E423EA40DF0028DBC2 /* Onboarding */,
 				CBA443EE235E4D94006FB35A /* Keys.entitlements */,
 				CBA443F0235E4D94006FB35A /* AppDelegate.swift */,
+				CBD0C3E423EA40DF0028DBC2 /* Onboarding */,
 				CBA443F2235E4D94006FB35A /* Main.storyboard */,
 				CBA443F5235E4D94006FB35A /* ViewController.swift */,
+				CB0D93DA23CBC4AC0098F654 /* SharedUserDefaults.swift */,
 				CBA443F7235E4D94006FB35A /* Assets.xcassets */,
 				CBA443F9235E4D95006FB35A /* Info.plist */,
-				CB0D93DA23CBC4AC0098F654 /* SharedUserDefaults.swift */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
