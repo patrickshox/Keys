@@ -1,7 +1,15 @@
+//
+//  ViewController.swift
+//  Keys
+//
+//  Created by Patrick Botros on 10/21/19.
+//  Copyright © 2019 Patrick Botros. All rights reserved.
+//
+
 import Cocoa
 import SafariServices.SFSafariApplication
 
-let defaults = UserDefaults.init(suiteName: SharedUserDefaults.suiteName)
+let defaults = UserDefaults.init(suiteName: "L27L4K8SQU.shockerella")
 
 class ViewController: NSViewController {
     @IBAction func reportPressed(_ sender: NSButton) {
@@ -18,15 +26,16 @@ class ViewController: NSViewController {
     }
     override func viewDidAppear() {
         defaults!.register(defaults: ["activationKey" : "G"])
+        defaults!.register(defaults: ["shouldStealFocus" : true])
         // set the keycap's label and the label adjacent to the reset button to match the user's stored preference.
         customActivationKey.stringValue = defaults!.string(forKey: "activationKey")!
         secondaryLabelForCustomActivationKey.stringValue = customActivationKey.stringValue;
         // set the checkboxes state to match the user's stored preference.
-        if (!(defaults?.bool(forKey: "shouldStealFocus") ?? true)) {
-            focusCheckbox.state = .off
+        if ((defaults?.bool(forKey: "shouldStealFocus"))!) {
+            focusCheckbox.state = .on
         }
         else {
-            focusCheckbox.state = .on
+            focusCheckbox.state = .off
         }
         self.customActivationKey.focusRingType = NSFocusRingType.none;
         customActivationKey.customizeCursorColor(NSColor.clear)

@@ -26,10 +26,13 @@
 /* Class = "NSMenuItem"; title = "Hide Keys"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Cachez Clés";
 
-/* Class = "NSTextFieldCell"; title = "Current Activation Key: "; ObjectID = "PCF-hf-TAS"; */
+/* Class = "NSTextFieldCell"; title = "Current Activation Key:"; ObjectID = "PCF-hf-TAS"; */
 "PCF-hf-TAS.title" = "Clé d'activation actuelle:";
 
-/* Class = "NSTextFieldCell"; title = "If you find Keys useful, please consider sharing it on social media or blogging about it. Thank you! 🙏"; ObjectID = "Qcm-ny-hV1"; */
+/* Class = "NSButtonCell"; title = "Take focus on page load"; ObjectID = "Q3x-aF-1zt"; */
+"Q3x-aF-1zt.title" = "Concentrez-vous sur le chargement des pages";
+
+/* Class = "NSTextFieldCell"; title = "If you find Keys useful, please consider leaving a review, sharing it on social media or blogging about it. Thank you! 🙏"; ObjectID = "Qcm-ny-hV1"; */
 "Qcm-ny-hV1.title" = "Si vous trouvez les clés utiles, pensez à laisser un avis, à le partager sur les réseaux sociaux ou à bloguer à ce sujet. Je vous remercie! 🙏";
 
 /* Class = "NSButtonCell"; alternateTitle = "Install"; ObjectID = "Srx-0j-A4D"; */

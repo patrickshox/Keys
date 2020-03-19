@@ -29,6 +29,9 @@
 /* Class = "NSTextFieldCell"; title = "Current Activation Key: "; ObjectID = "PCF-hf-TAS"; */
 "PCF-hf-TAS.title" = "Clave de Activación Actual:";
 
+/* Class = "NSButtonCell"; title = "Take focus on page load"; ObjectID = "Q3x-aF-1zt"; */
+"Q3x-aF-1zt.title" = "Centrarse en la carga de la página";
+
 /* Class = "NSTextFieldCell"; title = "If you find Keys useful, please consider sharing it on social media or blogging about it. Thank you! 🙏"; ObjectID = "Qcm-ny-hV1"; */
 "Qcm-ny-hV1.title" = "Si encuentra útiles las claves, considere dejar una reseña, compartirla en las redes sociales o bloguear sobre ella. ¡Gracias! 🙏";
 

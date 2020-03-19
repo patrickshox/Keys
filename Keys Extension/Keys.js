@@ -41,7 +41,6 @@ window.addEventListener('load', (event) => {
 });
 
 $("html").on('keypress', function (activationEvent) {
-    // safari.extension.dispatchMessage("refreshPreferences")
     if (!keysCurrentlyActive && upSinceDeactivation && activationEvent.key.toUpperCase() == preferredActivationKey  && activationEvent.target.nodeName != "INPUT" && activationEvent.target.nodeName != "TEXTAREA" && !activationEvent.target.isContentEditable && !activationEvent.metaKey && !activationEvent.ctrlKey && !activationEvent.altKey && !activationEvent.altGraphKey) {
         deactivate();
         keysCurrentlyActive = true;

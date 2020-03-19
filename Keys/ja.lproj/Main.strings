@@ -29,6 +29,9 @@
 /* Class = "NSTextFieldCell"; title = "Current Activation Key: "; ObjectID = "PCF-hf-TAS"; */
 "PCF-hf-TAS.title" = "現在の発動キー: ";
 
+/* Class = "NSButtonCell"; title = "Take focus on page load"; ObjectID = "Q3x-aF-1zt"; */
+"Q3x-aF-1zt.title" = "ページの読み込みに集中する";
+
 /* Class = "NSTextFieldCell"; title = "If you find Keys useful, please consider sharing it on social media or blogging about it. Thank you! 🙏"; ObjectID = "Qcm-ny-hV1"; */
 "Qcm-ny-hV1.title" = "Keysが役立つと思う場合は、レビューを残すか、ソーシャルメディアで共有するか、ブログについて検討してください。 ありがとうございました！ 🙏";
 
