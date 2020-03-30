@@ -6,7 +6,7 @@
     <img align="right" style="position: absolute" src="Resources/MacAppStoreBadge.svg">
   </a>
 </h1>
-Keys for Safari <b>free</b> is a browser extension that lets users <b>keyboard-navigate</b> the web by dynamically generating and rendering shortcut keys in the least ugly/confusing way possible.
+Keys for Safari is a browser extension that lets users <b>keyboard-navigate</b> the web by dynamically generating and rendering shortcut keys in the least ugly/confusing way possible.
 
 <br>
 
