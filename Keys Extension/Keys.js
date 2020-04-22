@@ -578,6 +578,7 @@ function priorSiteSpecificModifications() {
     if (window.location.hostname == "www.youtube.com") {
         $(".ytp-videowall-still-info-content").addClass("Keys-Show-While-Active");
         $(".ytp-videowall-still-info-content.faux").addClass("Keys-Show-While-Active");
+        $(".ytp-ce-expanding-image").addClass("Keys-Should-Generate-Floating-Text");
         $("paper-ripple").remove();
     }
     if (window.location.hostname == "www.github.com") {
