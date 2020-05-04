@@ -4,7 +4,7 @@
 //
 //  Created by Patrick Botros on 10/21/19.
 //  Copyright © 2019 Patrick Botros. All rights reserved.
-//
+//  swiftlint:disable force_cast
 
 import Cocoa
 import SafariServices.SFSafariApplication
@@ -12,48 +12,61 @@ import SafariServices.SFSafariApplication
 let defaults = UserDefaults.init(suiteName: "L27L4K8SQU.shockerella")
 
 class ViewController: NSViewController {
+
     @IBAction func reportPressed(_ sender: NSButton) {
         NSWorkspace.shared.open(NSURL(string: "https://github.com/patrickshox/Keys/issues")! as URL)
     }
+
     @IBOutlet var focusCheckbox: NSButton!
+
     @IBAction func focusCheckboxPressed(_ sender: Any) {
         if focusCheckbox!.state == .on {
             defaults?.set(true, forKey: "shouldStealFocus")
-        }
-        else {
+        } else {
             defaults?.set(false, forKey: "shouldStealFocus")
         }
     }
+
     override func viewDidAppear() {
-        defaults!.register(defaults: ["activationKey" : "G"])
-        defaults!.register(defaults: ["shouldStealFocus" : true])
+        defaults!.register(defaults: ["activationKey": "G"])
+        defaults!.register(defaults: ["shouldStealFocus": true])
         // set the keycap's label and the label adjacent to the reset button to match the user's stored preference.
         customActivationKey.stringValue = defaults!.string(forKey: "activationKey")!
-        secondaryLabelForCustomActivationKey.stringValue = customActivationKey.stringValue;
-        // set the checkboxes state to match the user's stored preference.
-        if ((defaults?.bool(forKey: "shouldStealFocus"))!) {
+        secondaryLabelForCustomActivationKey.stringValue = customActivationKey.stringValue
+        // set the checkbox's state to match the user's stored preference.
+        if (defaults?.bool(forKey: "shouldStealFocus"))! {
             focusCheckbox.state = .on
-        }
-        else {
+        } else {
             focusCheckbox.state = .off
         }
-        self.customActivationKey.focusRingType = NSFocusRingType.none;
+        self.customActivationKey.focusRingType = NSFocusRingType.none
+        self.view.window?.isMovableByWindowBackground = true
         customActivationKey.customizeCursorColor(NSColor.clear)
-        customActivationKey.currentEditor()?.selectedRange = NSMakeRange(0, 0)
+        customActivationKey.currentEditor()?.selectedRange = NSRange(location: 0, length: 0)
     }
+
     @IBOutlet weak var secondaryLabelForCustomActivationKey: NSTextField!
-    @IBOutlet weak var customActivationKey: NSTextField!;
+
+    @IBOutlet weak var customActivationKey: NSTextField!
+
     @IBAction func openSafariExtensionPreferences(_ sender: AnyObject?) {
         SFSafariApplication.showPreferencesForExtension(withIdentifier: "shockerella.Keys.Extension") { error in
-            if let _ = error {
-                // Insert code to inform the user that something went wrong.
+            if error != nil {
             }
         }
     }
+
     @IBAction func resetClicked(_ sender: Any) {
         customActivationKey.becomeFirstResponder()
         self.customActivationKey.selectAll(nil)
     }
+
+    @IBAction func customizeBlacklist(_ sender: Any) {
+        let blacklist: BlackListWindowController?
+        blacklist = BlackListWindowController.loadFromNib()
+        blacklist?.showWindow(self)
+    }
+
 }
 
 extension String {
@@ -64,21 +77,21 @@ extension String {
 
 extension ViewController: NSTextFieldDelegate {
     func controlTextDidChange(_ obj: Notification) {
-        if (self.customActivationKey.stringValue.count > 0 && String(self.customActivationKey.stringValue.last!).isAlphanumeric) {
-            self.customActivationKey.stringValue = String(self.customActivationKey.stringValue.last!.uppercased())
-        }
-        else if (self.customActivationKey.stringValue.count == 0) {
-            self.customActivationKey.stringValue = "G";
-        }
-        else if (String(self.customActivationKey.stringValue.first!).isAlphanumeric) {
-            self.customActivationKey.stringValue = self.customActivationKey.stringValue.first!.uppercased()
-        }
-        else {
+        var string = self.customActivationKey.stringValue
+        let length = string.count
+        if length > 0 && String(string.last!).isAlphanumeric {
+            self.customActivationKey.stringValue = String(string.last!.uppercased())
+        } else if length == 0 {
+            self.customActivationKey.stringValue = "G"
+        } else if String(string.first!).isAlphanumeric {
+            self.customActivationKey.stringValue = string.first!.uppercased()
+        } else {
             self.customActivationKey.stringValue = "G"
         }
-        secondaryLabelForCustomActivationKey.stringValue = self.customActivationKey.stringValue;
-        defaults!.set(self.customActivationKey.stringValue, forKey: "activationKey");
-        self.customActivationKey.moveToEndOfDocument(nil);
+        string = self.customActivationKey.stringValue
+        secondaryLabelForCustomActivationKey.stringValue = string
+        defaults!.set(string, forKey: "activationKey")
+        self.customActivationKey.moveToEndOfDocument(nil)
     }
 }
 
@@ -88,4 +101,3 @@ extension NSTextField {
         fieldEditor.insertionPointColor = cursorColor
     }
 }
-

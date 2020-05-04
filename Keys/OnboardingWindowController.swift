@@ -11,10 +11,10 @@ import SafariServices.SFSafariApplication
 
 final class OnboardingWindowController: NSWindowController {
     class func loadFromNib() -> OnboardingWindowController {
-        return NSStoryboard(
+        return (NSStoryboard(
             name: "Onboarding",
             bundle: nil
-        ).instantiateController(withIdentifier: "OnboardingWindowController") as! OnboardingWindowController
+        ).instantiateController(withIdentifier: "OnboardingWindowController") as? OnboardingWindowController)!
     }
 }
 
@@ -38,7 +38,7 @@ final class SecondaryViewController: NSViewController {
         windowController?.close()
 
         SFSafariApplication.showPreferencesForExtension(withIdentifier: "shockerella.Keys.Extension") { error in
-            if let _ = error {
+            if error != nil {
                 // Insert code to inform the user that something went wrong.
             }
         }

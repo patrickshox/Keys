@@ -10,12 +10,12 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
+
     var windowController: OnboardingWindowController?
-    
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        if UserDefaults.standard.bool(forKey: "didShowTutorial") { }
-        else {
+        if UserDefaults.standard.bool(forKey: "didShowTutorial") {
+        } else {
             if windowController == nil {
                 windowController = OnboardingWindowController.loadFromNib()
             }
@@ -23,11 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             windowController?.showWindow(self)
         }
     }
-    
+
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-    
+
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }

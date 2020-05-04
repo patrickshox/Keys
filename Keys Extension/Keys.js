@@ -7,14 +7,14 @@
 
 deactivate();
 
-var visibleTargets =[];
+var visibleTargets = [];
 var keysCurrentlyActive = false;
 var keysWasActive = false;
 var upSinceDeactivation = true;
 var searchText = "";
 var DataFrame = [];
 var TextDictionary = {};
-var ExistingKeys=[];
+var ExistingKeys = [];
 var homeRow = ["f", "d", "j", "k", "s", "l", "m", "n", "c", "v", "e", "r", "t", "u", "i", "o", "a"];
 var idealLength;
 var inputelement;
@@ -23,6 +23,7 @@ var permutations;
 var scrollPositionWhenActivated;
 var preferredActivationKey;
 var shouldStealFocus;
+var blacklist = [];
 
 // get user's defaults/preferences.
 safari.extension.dispatchMessage("refreshPreferences")
@@ -34,14 +35,24 @@ $(document).ready(function() {
         $(":focus").blur();
     }
 });
+
 window.addEventListener('load', (event) => {
     if (shouldStealFocus) {
         $(":focus").blur();
     }
 });
 
+function isBlacklisted(url) {
+    for (const blacklistedSite of blacklist) {
+        if (url.includes(blacklistedSite)) {
+            return true
+        }
+    }
+    return false
+}
+
 $("html").on('keypress', function (activationEvent) {
-    if (!keysCurrentlyActive && upSinceDeactivation && activationEvent.key.toUpperCase() == preferredActivationKey  && activationEvent.target.nodeName != "INPUT" && activationEvent.target.nodeName != "TEXTAREA" && !activationEvent.target.isContentEditable && !activationEvent.metaKey && !activationEvent.ctrlKey && !activationEvent.altKey && !activationEvent.altGraphKey) {
+    if (!keysCurrentlyActive && upSinceDeactivation && activationEvent.key.toUpperCase() == preferredActivationKey  && activationEvent.target.nodeName != "INPUT" && activationEvent.target.nodeName != "TEXTAREA" && !activationEvent.target.isContentEditable && !activationEvent.metaKey && !activationEvent.ctrlKey && !activationEvent.altKey && !activationEvent.altGraphKey && !isBlacklisted(window.location.hostname)) {
         deactivate();
         keysCurrentlyActive = true;
         upSinceDeactivation = false;
@@ -692,6 +703,8 @@ safari.self.addEventListener("message", handleMessage);
 function handleMessage(event) {
     shouldStealFocus = event.message.shouldStealFocus;
     preferredActivationKey = event.message.currentKey;
+    blacklist = event.message.blacklist;
+    console.log(blacklist)
 }
 
 function resetAllInputValues() {
