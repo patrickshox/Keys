@@ -44,6 +44,9 @@
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
 "Vdr-fp-XzO.title" = "ほかを非表示";
 
+/* Class = "NSButtonCell"; title = "Customize Blacklist…"; ObjectID = "XW2-Fn-g6t"; */
+"XW2-Fn-g6t.title" = "ブラックリストをカスタマイズ…";
+
 /* Class = "NSTextFieldCell"; title = "G"; ObjectID = "eXW-lN-7hX"; */
 "eXW-lN-7hX.title" = "G";
 

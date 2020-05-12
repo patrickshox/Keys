@@ -26,24 +26,24 @@ var shouldStealFocus;
 var blacklist = [];
 
 // get user's defaults/preferences.
-safari.extension.dispatchMessage("refreshPreferences")
+safari.extension.dispatchMessage("refreshPreferences");
 
 // a couple different ways to time focus stealing.
 $(document).ready(function() {
-    safari.extension.dispatchMessage("refreshPreferences")
+    safari.extension.dispatchMessage("refreshPreferences");
     if (shouldStealFocus) {
         $(":focus").blur();
     }
 });
 
-window.addEventListener('load', (event) => {
+window.addEventListener("load", (event) => {
     if (shouldStealFocus) {
         $(":focus").blur();
     }
 });
 
 function isBlacklisted(url) {
-    for (const blacklistedSite of blacklist) {
+    for (blacklistedSite of blacklist) {
         if (url.includes(blacklistedSite)) {
             return true
         }
@@ -51,7 +51,7 @@ function isBlacklisted(url) {
     return false
 }
 
-$("html").on('keypress', function (activationEvent) {
+$("html").on("keypress", function (activationEvent) {
     if (!keysCurrentlyActive && upSinceDeactivation && activationEvent.key.toUpperCase() == preferredActivationKey  && activationEvent.target.nodeName != "INPUT" && activationEvent.target.nodeName != "TEXTAREA" && !activationEvent.target.isContentEditable && !activationEvent.metaKey && !activationEvent.ctrlKey && !activationEvent.altKey && !activationEvent.altGraphKey && !isBlacklisted(window.location.hostname)) {
         deactivate();
         keysCurrentlyActive = true;
@@ -93,8 +93,8 @@ $("html").on('keypress', function (activationEvent) {
         }
 
         generateInputBox();
-        $("#Keys-Input-Box").on('keydown', function (secondarykeys) {recordKeystrokes(secondarykeys)})
-        $("#Keys-Input-Box").on('keyup', function () {$("#Keys-Input-Box").val($("#Keys-Input-Box").val().replace(/[^0-9a-z]/gi, '')); })
+        $("#Keys-Input-Box").on("keydown", function (secondarykeys) {recordKeystrokes(secondarykeys)})
+        $("#Keys-Input-Box").on("keyup", function () {$("#Keys-Input-Box").val($("#Keys-Input-Box").val().replace(/[^0-9a-z]/gi, "")); })
         scrollPositionWhenActivated = $(window).scrollTop();
     }
 });
@@ -102,7 +102,7 @@ $("html").on('keypress', function (activationEvent) {
 function generateInputBox() {
     $(":focus").blur();
     if (!document.getElementById("Keys-Input-Box")) {
-    inputelement = document.createElement('input');
+    inputelement = document.createElement("input");
     inputelement.setAttribute("id", "Keys-Input-Box");
     inputelement.setAttribute("type", "text")
     inputelement.setAttribute("autocomplete", "off")
@@ -171,7 +171,7 @@ async function colorTextKeys(TextDictionary){
             DataFrame.push([element, key, $(element).text()/*, $(element).closest("a, button").attr("href")*/])
             var splitkey = key.split("").map(character =>"<span class='Keys-Character Keys-Initial-Character'>"+character+"</span>").join("");
             $(element).before(element.outerHTML);
-            $(element.previousSibling).html($(element).text().replace(new RegExp('(' + key + ')'), `<span id=$1 class='Keys-Clickable-Text-Key'>${splitkey}</span>`))
+            $(element.previousSibling).html($(element).text().replace(new RegExp("(" + key + ")"), `<span id=$1 class='Keys-Clickable-Text-Key'>${splitkey}</span>`))
             $(element.previousSibling).addClass("faux");
             $(element).addClass("Keys-Hidden-Originals");
         }
@@ -180,7 +180,7 @@ async function colorTextKeys(TextDictionary){
 
 function pairexists(table, text, url) {
     for (let i=0; i<table.length; i++) {
-        if (table[i][2]==text && table[i][3]==url && url!='#'){
+        if (table[i][2]==text && table[i][3]==url && url!="#"){
             return table[i][1]
         }
         else{continue}
@@ -233,7 +233,7 @@ function createFloatingText(image, key){
 
 function tether(label, element) {
     $(element).addClass(`Keys-${$(label).text()}`)
-    new Tether({element: label, target: element, attachment: 'middle center', targetAttachment: 'middle center'})
+    new Tether({element: label, target: element, attachment: "middle center", targetAttachment: "middle center"})
 }
 
 // assembles the TextDictionary asynchronously.
@@ -260,7 +260,7 @@ async function addToTextDictionaryOrJustProcess(element) {
             break;
         }
     }
-    if (element.tagName == 'A' || element.tagName == 'BUTTON' || String($(element).attr("role")).toLowerCase() == 'button' || String($(element).attr("role")).toLowerCase() == 'link' || String($(element).attr("role")).toLowerCase() == 'tab' || String($(element).attr("role")).toLowerCase() == 'option') {
+    if (element.tagName == "A" || element.tagName == "BUTTON" || String($(element).attr("role")).toLowerCase() == "button" || String($(element).attr("role")).toLowerCase() == "link" || String($(element).attr("role")).toLowerCase() == "tab" || String($(element).attr("role")).toLowerCase() == "option") {
         if ($(element).text()) {
             var responsibleNode = await earmarkText(element);
             var label = await AssignTextKey(responsibleNode)
@@ -283,7 +283,7 @@ async function addToTextDictionaryOrJustProcess(element) {
             }
         }
     }
-    else if (element.tagName == 'IMG' || element.tagName == 'svg' || element.tagName == 'I'){
+    else if (element.tagName == "IMG" || element.tagName == "svg" || element.tagName == "I"){
         for (permutationIndex; permutationIndex<permutations.length; permutationIndex++) {
             if (!isLeftAbsent(permutations[permutationIndex])) {
                 continue;
@@ -292,7 +292,7 @@ async function addToTextDictionaryOrJustProcess(element) {
             var label = createFloatingText(element, permutations[permutationIndex]);
             permutationIndex++;
             tether(label, element);
-            if (element.tagName == 'IMG') {
+            if (element.tagName == "IMG") {
                 if (element.getBoundingClientRect().width<30 || element.getBoundingClientRect().height < 30){
                     element.classList.add("Keys-Small-Clickable-Image")
                 }
@@ -305,14 +305,14 @@ async function addToTextDictionaryOrJustProcess(element) {
                     element.parentElement.classList.add("Keys-Container-of-Large-Image")
                 }
             }
-            if (element.tagName == 'svg' || element.tagName == 'I') {
+            if (element.tagName == "svg" || element.tagName == "I") {
                 element.classList.add("Keys-Clickable-Icon")
             }
             break;
         }
             return "";
     }
-    else if (element.tagName == 'INPUT') {
+    else if (element.tagName == "INPUT") {
         createAndSwapSearchBarPlaceholder(element);
     }
     else {
@@ -330,7 +330,6 @@ async function earmarkText(anchor) {
     }
     else {
         first_line = nodeFind(anchor)
-        
     }
     return first_line;
 }
@@ -414,23 +413,23 @@ function recordKeystrokes(keypress) {
             searchText = searchText.slice(0, -1);
             if (searchText.length == 0) {
                 deactivate();
-                $("html").one('keyup', function(){
+                $("html").one("keyup", function(){
                     upSinceDeactivation=true;
                 })
             }
         }
         DataFrame = DataFrame.filter(function(element) {
-            return typeof element[0] !== 'undefined' && element[0];
+            return typeof element[0] !== "undefined" && element[0];
         });
         for (var keyTriplet of DataFrame) {
-            if (keyTriplet[0].tagName == 'INPUT' && (keyTriplet[0].getAttribute("type") == "submit" || keyTriplet[0].getAttribute("type") == "button")) {
+            if (keyTriplet[0].tagName == "INPUT" && (keyTriplet[0].getAttribute("type") == "submit" || keyTriplet[0].getAttribute("type") == "button")) {
                 recolorMatchingKeys(keyTriplet[0], $(keyTriplet[2]), keyTriplet[1].toLowerCase(), false)
                 if (keyTriplet[1].toLowerCase() == searchText.toLowerCase()) {
                     $(keyTriplet[0]).click();
                     $(keyTriplet[0]).submit();
                     keyTriplet[0].focus()
                     deactivate();
-                    $("html").one('keyup', function(){
+                    $("html").one("keyup", function(){
                         upSinceDeactivation=true;
                     })
                 }
@@ -438,16 +437,16 @@ function recordKeystrokes(keypress) {
             else if (keyTriplet[2] instanceof Element && keyTriplet[2].classList.contains("Keys-Floating-Key")) {
                 recolorMatchingKeys(keyTriplet[0], $(keyTriplet[2]), keyTriplet[1].toLowerCase(), true)
             }
-            else if (keyTriplet[0].classList.contains('Keys-Clickable-Text')){
+            else if (keyTriplet[0].classList.contains("Keys-Clickable-Text")){
                 recolorMatchingKeys(keyTriplet[0], $(keyTriplet[0]).prev(), keyTriplet[1].toLowerCase(), true)
             }
-            else if (keyTriplet[0].tagName == 'INPUT') {
+            else if (keyTriplet[0].tagName == "INPUT") {
                 if (keyTriplet[1].toLowerCase() == searchText.toLowerCase()) {
                     keypress.preventDefault();
                     $(keyTriplet[0]).val($(keyTriplet[0]).attr("original_value"));
                     deactivate();
                     keyTriplet[0].focus()
-                    $("html").one('keyup', function(){
+                    $("html").one("keyup", function(){
                         upSinceDeactivation=true;
                     })
                 }
@@ -517,7 +516,7 @@ function deactivate() {
     $("#uh-search-box").off() // site-specific mod for Yahoo Spanish. Ugly solution but will change later.
 }
 
-$(window).on('scroll', function() {
+$(window).on("scroll", function() {
     if (keysCurrentlyActive && Math.abs($(this).scrollTop() - scrollPositionWhenActivated) >= 190) {
         deactivate();
         upSinceDeactivation=true;
@@ -547,11 +546,11 @@ function siteSpecificModifications() {
         $(".Keys-Small-Clickable-Image").parent().addClass("Keys-Small-Clickable-Image");
     }
     if (window.location.hostname.includes("facebook")) {
-        $("#u_0_9 input._5eay").css({'opacity':'0'});
+        $("#u_0_9 input._5eay").css({"opacity":"0"});
     }
     if (window.location.hostname == "www.apple.com") {
-        $(".localnav-title.faux").css({'font-size':'inherit'});
-        $(".localnav-title.faux").css({'color':'blue'});
+        $(".localnav-title.faux").css({"font-size":"inherit"});
+        $(".localnav-title.faux").css({"color":"blue"});
     }
     if (window.location.hostname == "www.youtube.com") {
         $("ytd-topbar-menu-button-renderer yt-img-shadow").addClass("Keys-Container-of-Large-Image");
@@ -574,8 +573,8 @@ function siteSpecificModifications() {
         $(".Keys-Floating-Key").insertAfter("head")
     }
     if (window.location.hostname === "3.basecamp.com" && $("a.card__link")) {
-        $("article").on('click', function(event) {
-            window.open(event.target.closest("a").href, '_self')
+        $("article").on("click", function(event) {
+            window.open(event.target.closest("a").href, "_self")
         });
     }
 }
@@ -656,7 +655,7 @@ function insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-const mouseClickEvents = ['mousedown', 'click', 'mouseup', 'focus'];
+const mouseClickEvents = ["mousedown", "click", "mouseup", "focus"];
 
 function simulateMouseClick(element){
     resetAllInputValues();
@@ -671,7 +670,7 @@ function simulateMouseClick(element){
           })
         )
     );
-    $("html").one('keyup', function(){
+    $("html").one("keyup", function(){
         upSinceDeactivation=true;
     })
 }

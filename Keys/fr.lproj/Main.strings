@@ -32,9 +32,6 @@
 /* Class = "NSButtonCell"; title = "Take focus on page load"; ObjectID = "Q3x-aF-1zt"; */
 "Q3x-aF-1zt.title" = "Concentrez-vous sur le chargement des pages";
 
-/* Class = "NSTextFieldCell"; title = "If you find Keys useful, please consider leaving a review, sharing it on social media or blogging about it. Thank you! 🙏"; ObjectID = "Qcm-ny-hV1"; */
-"Qcm-ny-hV1.title" = "Si vous trouvez les clés utiles, pensez à laisser un avis, à le partager sur les réseaux sociaux ou à bloguer à ce sujet. Je vous remercie! 🙏";
-
 /* Class = "NSButtonCell"; alternateTitle = "Install"; ObjectID = "Srx-0j-A4D"; */
 "Srx-0j-A4D.alternateTitle" = "Installer";
 
@@ -43,6 +40,9 @@
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
 "Vdr-fp-XzO.title" = "Masquer les Autres";
+
+/* Class = "NSButtonCell"; title = "Customize Blacklist…"; ObjectID = "XW2-Fn-g6t"; */
+"XW2-Fn-g6t.title" = "Personnaliser la Liste Noire…";
 
 /* Class = "NSTextFieldCell"; title = "G"; ObjectID = "eXW-lN-7hX"; */
 "eXW-lN-7hX.title" = "G";
