@@ -37,7 +37,7 @@
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RtJ-Wt-Z9A">
                                 <rect key="frame" x="225" y="404" width="286" height="48"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to Keys" id="jXm-sk-IEB">
+                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="Welcome to Keys" id="jXm-sk-IEB">
                                     <font key="font" size="40" name="SFProDisplay-Light"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -68,7 +68,7 @@
                             <button autoresizesSubviews="NO" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OIX-hQ-gM6">
                                 <rect key="frame" x="265" y="47" width="205" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="2rU-Ha-7VW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="2rU-Ha-7VW"/>
                                     <constraint firstAttribute="height" constant="30" id="Xxp-65-h06"/>
                                 </constraints>
                                 <buttonCell key="cell" type="bevel" title="Continue" bezelStyle="regularSquare" image="buttonCell:d0B-Jl-0FC:image" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="d0B-Jl-0FC">
@@ -84,7 +84,7 @@ DQ
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wFL-gc-xTL">
                                 <rect key="frame" x="243" y="384" width="249" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Dynamic keyboard shortcuts. Everywhere." id="Vwx-Nt-jyg">
+                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="Dynamic keyboard shortcuts. Everywhere." id="Vwx-Nt-jyg">
                                     <font key="font" size="14" name="SFProDisplay-Regular"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -124,21 +124,21 @@ DQ
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Vx-ub-mXo">
                                 <rect key="frame" x="272" y="384" width="192" height="48"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Get Started" id="qZp-uo-Euq">
+                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="Get Started" id="qZp-uo-Euq">
                                     <font key="font" size="40" name="SFProDisplay-Light"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="40" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hge-u5-TOM">
-                                <rect key="frame" x="131" y="139" width="474" height="200"/>
+                                <rect key="frame" x="68" y="139" width="600" height="200"/>
                                 <subviews>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUh-RH-XHD">
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUh-RH-XHD">
                                         <rect key="frame" x="0.0" y="160" width="474" height="40"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jyr-KV-yzg">
                                                 <rect key="frame" x="-2" y="0.0" width="42" height="40"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="􀂡" id="qfo-O9-cnK">
+                                                <textFieldCell key="cell" enabled="NO" title="􀂡" id="qfo-O9-cnK">
                                                     <font key="font" size="34" name="SFCompactDisplay-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -147,17 +147,17 @@ DQ
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSV-Qn-pJF">
                                                 <rect key="frame" x="53" y="0.0" width="421" height="40"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-1V-H1B">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-1V-H1B">
                                                         <rect key="frame" x="-2" y="24" width="144" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="G is the activation Key" id="aDd-RP-SJT">
+                                                        <textFieldCell key="cell" enabled="NO" title="G is the activation Key" id="aDd-RP-SJT">
                                                             <font key="font" metaFont="systemSemibold" size="13"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iO7-QU-epH">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="iO7-QU-epH">
                                                         <rect key="frame" x="-2" y="0.0" width="425" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Press it to generate and render shortcuts over every clickable element." id="n2Z-gZ-IYg">
+                                                        <textFieldCell key="cell" enabled="NO" title="Press it to generate and render shortcuts over every clickable element." id="n2Z-gZ-IYg">
                                                             <font key="font" metaFont="systemLight" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -188,7 +188,7 @@ DQ
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ghY-TL-Mc9">
                                                 <rect key="frame" x="-2" y="4" width="39" height="36"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Ab" allowsEditingTextAttributes="YES" id="vaM-Kw-TOq">
+                                                <textFieldCell key="cell" enabled="NO" title="Ab" allowsEditingTextAttributes="YES" id="vaM-Kw-TOq">
                                                     <font key="font" size="30" name="SFCompactDisplay-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -197,17 +197,17 @@ DQ
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2G-RE-g7l">
                                                 <rect key="frame" x="50" y="0.0" width="265" height="40"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dZq-pD-0jA">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="dZq-pD-0jA">
                                                         <rect key="frame" x="-2" y="24" width="208" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="The shortcuts will appear in red." id="dAU-JS-Hni">
+                                                        <textFieldCell key="cell" enabled="NO" title="The shortcuts will appear in red." id="dAU-JS-Hni">
                                                             <font key="font" metaFont="systemSemibold" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-XF-ZQz">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-XF-ZQz">
                                                         <rect key="frame" x="-2" y="0.0" width="269" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="As you type a shortcut, it will become green." id="glv-8U-Ocg">
+                                                        <textFieldCell key="cell" enabled="NO" title="As you type a shortcut, it will become green." id="glv-8U-Ocg">
                                                             <font key="font" metaFont="systemLight" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -238,7 +238,7 @@ DQ
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GA6-5K-EUX">
                                                 <rect key="frame" x="-2" y="11" width="42" height="29"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="􀇳" allowsEditingTextAttributes="YES" id="i1f-as-31J">
+                                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="􀇳" allowsEditingTextAttributes="YES" id="i1f-as-31J">
                                                     <font key="font" size="24" name="SFCompactDisplay-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -247,17 +247,17 @@ DQ
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNr-nX-3i1">
                                                 <rect key="frame" x="53" y="0.0" width="253" height="40"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yu3-tO-CfG">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="yu3-tO-CfG">
                                                         <rect key="frame" x="-2" y="24" width="257" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Type the entire key to click the element." id="xsB-5d-0BS">
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="Type the entire key to click the element." id="xsB-5d-0BS">
                                                             <font key="font" metaFont="systemSemibold" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J5T-LH-v6Y">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="J5T-LH-v6Y">
                                                         <rect key="frame" x="-2" y="0.0" width="147" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="No need to press enter. " id="xME-Ww-roI">
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="No need to press enter. " id="xME-Ww-roI">
                                                             <font key="font" metaFont="systemLight" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -284,6 +284,9 @@ DQ
                                         </customSpacing>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="Vvf-4h-ijY"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -301,7 +304,7 @@ DQ
                                     <button autoresizesSubviews="NO" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fqe-br-aO8" userLabel="YT">
                                         <rect key="frame" x="-2" y="-3" width="205" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="201" id="VWP-uR-hJs"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="VWP-uR-hJs"/>
                                             <constraint firstAttribute="height" constant="30" id="Xpq-V4-bbi"/>
                                         </constraints>
                                         <buttonCell key="cell" type="bevel" title="Video Tutorial" bezelStyle="regularSquare" image="buttonCell:fkC-De-bHT:image" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fkC-De-bHT">
@@ -316,7 +319,7 @@ DQ
                                         <rect key="frame" x="207" y="-3" width="205" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="bvR-fV-Tte"/>
-                                            <constraint firstAttribute="width" constant="201" id="vMd-wW-1W6"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="vMd-wW-1W6"/>
                                         </constraints>
                                         <buttonCell key="cell" type="bevel" title="Continue" bezelStyle="regularSquare" image="buttonCell:JAN-gC-mvO:image" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JAN-gC-mvO">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -358,27 +361,26 @@ DQ
         <scene sceneID="fKj-89-DgD">
             <objects>
                 <viewController id="MEq-Wf-TCa" customClass="SecondaryViewController" customModule="Keys" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="6ZM-3N-hFp">
+                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="6ZM-3N-hFp">
                         <rect key="frame" x="0.0" y="0.0" width="735" height="478"/>
-                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CR6-0h-muk">
                                 <rect key="frame" x="249" y="384" width="238" height="48"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="More Features" id="iIw-q3-iec">
+                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="More Features" id="iIw-q3-iec">
                                     <font key="font" size="40" name="SFProDisplay-Light"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="40" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdx-zC-bNO">
-                                <rect key="frame" x="152" y="139" width="432" height="200"/>
+                                <rect key="frame" x="68" y="139" width="600" height="200"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLl-rh-216">
                                         <rect key="frame" x="0.0" y="160" width="432" height="40"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LyR-Cl-Nyt">
                                                 <rect key="frame" x="-2" y="0.0" width="42" height="40"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="􀂵" id="GW7-OF-7ul">
+                                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="􀂵" id="GW7-OF-7ul">
                                                     <font key="font" size="34" name="SFCompactDisplay-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -387,17 +389,17 @@ DQ
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMt-b7-47V">
                                                 <rect key="frame" x="53" y="0.0" width="379" height="40"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mh3-oK-jrN">
-                                                        <rect key="frame" x="-2" y="24" width="184" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Customizable Activation Key" id="Xjq-5P-G5I">
+                                                    <textField horizontalHuggingPriority="200" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mh3-oK-jrN">
+                                                        <rect key="frame" x="-2" y="24" width="383" height="16"/>
+                                                        <textFieldCell key="cell" enabled="NO" title="Customizable Activation Key" id="Xjq-5P-G5I">
                                                             <font key="font" metaFont="systemSemibold" size="13"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PIZ-Ut-wJO">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="PIZ-Ut-wJO">
                                                         <rect key="frame" x="-2" y="0.0" width="383" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Bind the activation character to whichever character you prefer." id="bTc-dO-dhE">
+                                                        <textFieldCell key="cell" lineBreakMode="charWrapping" enabled="NO" alignment="left" title="Bind the activation character to whichever character you prefer." id="bTc-dO-dhE">
                                                             <font key="font" metaFont="systemLight" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -428,7 +430,7 @@ DQ
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sTO-uC-WWL">
                                                 <rect key="frame" x="-2" y="4" width="41" height="36"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="􀆜" allowsEditingTextAttributes="YES" id="9YV-bu-Fw3">
+                                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="􀆜" allowsEditingTextAttributes="YES" id="9YV-bu-Fw3">
                                                     <font key="font" size="30" name="SFCompactDisplay-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -439,15 +441,15 @@ DQ
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gGb-lW-mjJ">
                                                         <rect key="frame" x="-2" y="24" width="142" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Functional Backspace" id="dtJ-xi-2ZR">
+                                                        <textFieldCell key="cell" enabled="NO" title="Functional Backspace" id="dtJ-xi-2ZR">
                                                             <font key="font" metaFont="systemSemibold" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-tN-80t">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-tN-80t">
                                                         <rect key="frame" x="-2" y="0.0" width="362" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="If you mistype a key longer than 1 letter, just use backspace." id="JEO-L4-6Ff">
+                                                        <textFieldCell key="cell" lineBreakMode="charWrapping" enabled="NO" title="If you mistype a key longer than 1 letter, just use backspace." id="JEO-L4-6Ff">
                                                             <font key="font" metaFont="systemLight" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -495,9 +497,9 @@ DQ
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4hw-Fa-GB7">
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="4hw-Fa-GB7">
                                                         <rect key="frame" x="-2" y="0.0" width="388" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Press escape, scroll away, or click the background to deactivate." id="eFa-Bc-KoD">
+                                                        <textFieldCell key="cell" lineBreakMode="charWrapping" title="Press escape, scroll away, or click the background to deactivate." id="eFa-Bc-KoD">
                                                             <font key="font" metaFont="systemLight" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -524,6 +526,9 @@ DQ
                                         </customSpacing>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="752-tL-Kxt"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -535,14 +540,10 @@ DQ
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6UX-di-PUz">
-                                <rect key="frame" x="267" y="264" width="410" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </stackView>
                             <button autoresizesSubviews="NO" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bEU-gF-rdW">
                                 <rect key="frame" x="227" y="54" width="281" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="277" id="NyZ-km-pNK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="NyZ-km-pNK"/>
                                     <constraint firstAttribute="height" constant="30" id="dUy-sG-caQ"/>
                                 </constraints>
                                 <buttonCell key="cell" type="bevel" title="Open in Safari Extensions Preferences..." bezelStyle="regularSquare" image="buttonCell:3Ww-Iw-YdM:image" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Ww-Iw-YdM">
@@ -563,7 +564,7 @@ DQ
                             <constraint firstItem="CR6-0h-muk" firstAttribute="centerX" secondItem="6ZM-3N-hFp" secondAttribute="centerX" id="OGf-7U-ZDf"/>
                             <constraint firstItem="bEU-gF-rdW" firstAttribute="top" secondItem="Tdx-zC-bNO" secondAttribute="bottom" constant="52" id="Q65-wh-Gbr"/>
                             <constraint firstItem="Tdx-zC-bNO" firstAttribute="centerX" secondItem="6ZM-3N-hFp" secondAttribute="centerX" id="cxB-ha-Ukc"/>
-                            <constraint firstItem="bEU-gF-rdW" firstAttribute="leading" secondItem="6ZM-3N-hFp" secondAttribute="leading" constant="229" id="lTO-n6-8gf"/>
+                            <constraint firstItem="bEU-gF-rdW" firstAttribute="centerX" secondItem="6ZM-3N-hFp" secondAttribute="centerX" id="lTq-7O-Jtc"/>
                         </constraints>
                     </view>
                 </viewController>

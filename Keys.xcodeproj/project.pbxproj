@@ -58,6 +58,10 @@
 		CB31F713246A751B00AE1F8B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Blacklist.strings; sourceTree = "<group>"; };
 		CB31F715246A751C00AE1F8B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Blacklist.strings; sourceTree = "<group>"; };
 		CB31F717246A751D00AE1F8B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Blacklist.strings; sourceTree = "<group>"; };
+		CB31F719246A7A8900AE1F8B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = ../fr.lproj/Onboarding.strings; sourceTree = "<group>"; };
+		CB31F71B246AA22E00AE1F8B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = ../de.lproj/Onboarding.strings; sourceTree = "<group>"; };
+		CB31F71D246AA23000AE1F8B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../ja.lproj/Onboarding.strings; sourceTree = "<group>"; };
+		CB31F71F246AA23100AE1F8B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../es.lproj/Onboarding.strings; sourceTree = "<group>"; };
 		CB93708D2460AA0F00ACD6DE /* BlackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackListViewController.swift; sourceTree = "<group>"; };
 		CB9370912460B69E00ACD6DE /* BlackListWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackListWindowController.swift; sourceTree = "<group>"; };
 		CBA443EB235E4D94006FB35A /* Keys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keys.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,6 +370,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				CBD0C3E623EA41340028DBC2 /* Base */,
+				CB31F719246A7A8900AE1F8B /* fr */,
+				CB31F71B246AA22E00AE1F8B /* de */,
+				CB31F71D246AA23000AE1F8B /* ja */,
+				CB31F71F246AA23100AE1F8B /* es */,
 			);
 			name = Onboarding.storyboard;
 			sourceTree = "<group>";

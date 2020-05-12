@@ -47,6 +47,7 @@ final class SecondaryViewController: NSViewController {
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if let destination = segue.destinationController as? SecondaryViewController {
             destination.windowController = windowController
+            destination.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height)
         }
     }
 }

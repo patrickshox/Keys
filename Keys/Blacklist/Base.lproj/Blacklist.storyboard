@@ -14,9 +14,9 @@
                     <window key="window" title="Blacklist" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="poW-2K-Fr3">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="249" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="249" width="480" height="350"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
-                        <value key="minSize" type="size" width="250" height="270"/>
+                        <value key="minSize" type="size" width="400" height="350"/>
                         <connections>
                             <outlet property="delegate" destination="8BX-du-8s1" id="LVD-ea-llf"/>
                         </connections>
@@ -114,7 +114,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="29B-U9-7CX">
-                                <rect key="frame" x="414.5" y="273" width="46" height="23"/>
+                                <rect key="frame" x="415" y="273" width="45" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="sXb-ML-9Nz"/>
                                 </constraints>
@@ -155,7 +155,7 @@
                 </viewController>
                 <customObject id="iHq-pV-qZT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="461.5"/>
+            <point key="canvasLocation" x="68" y="519"/>
         </scene>
     </scenes>
     <resources>
