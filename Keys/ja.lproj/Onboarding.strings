@@ -5,8 +5,8 @@
 /* Class = "NSButtonCell"; title = "Open in Safari Extensions Preferences..."; ObjectID = "3Ww-Iw-YdM"; */
 "3Ww-Iw-YdM.title" = "Safari拡張機能の設定で開く...";
 
-/* Class = "NSTextFieldCell"; title = "􀆜"; ObjectID = "9YV-bu-Fw3"; */
-"9YV-bu-Fw3.title" = "􀆜";
+/* Class = "NSTextFieldCell"; title = "􀉀"; ObjectID = "9YV-bu-Fw3"; */
+"9YV-bu-Fw3.title" = "􀉀";
 
 /* Class = "NSWindow"; title = "Welcome to Keys"; ObjectID = "BiT-lL-3Fa"; */
 "BiT-lL-3Fa.title" = "キーへようこそ";
@@ -17,8 +17,8 @@
 /* Class = "NSButtonCell"; title = "Continue"; ObjectID = "JAN-gC-mvO"; */
 "JAN-gC-mvO.title" = "継続する";
 
-/* Class = "NSTextFieldCell"; title = "If you mistype a key longer than 1 letter, just use backspace."; ObjectID = "JEO-L4-6Ff"; */
-"JEO-L4-6Ff.title" = "1文字より長いキーを誤って入力した場合は、バックスペースを使用してください。";
+/* Class = "NSTextFieldCell"; title = "Disable Keys on whichever sites you prefer."; ObjectID = "JEO-L4-6Ff"; */
+"JEO-L4-6Ff.title" = "どちらのサイトでも、Keysアプリを無効にします。";
 
 /* Class = "NSTextFieldCell"; title = "Dynamic keyboard shortcuts. Everywhere."; ObjectID = "Vwx-Nt-jyg"; */
 "Vwx-Nt-jyg.title" = "動的キーボードショートカット。 どこにでも。";
@@ -38,8 +38,8 @@
 /* Class = "NSTextFieldCell"; title = "The shortcuts will appear in red."; ObjectID = "dAU-JS-Hni"; */
 "dAU-JS-Hni.title" = "ショートカットは赤で表示されます。";
 
-/* Class = "NSTextFieldCell"; title = "Functional Backspace"; ObjectID = "dtJ-xi-2ZR"; */
-"dtJ-xi-2ZR.title" = "機能的なバックスペース";
+/* Class = "NSTextFieldCell"; title = "Blacklist"; ObjectID = "dtJ-xi-2ZR"; */
+"dtJ-xi-2ZR.title" = "ブラックリスト";
 
 /* Class = "NSTextFieldCell"; title = "Press escape, scroll away, or click the background to deactivate."; ObjectID = "eFa-Bc-KoD"; */
 "eFa-Bc-KoD.title" = "Escキーを押すか、スクロールして離れるか、背景をクリックして非アクティブ化します。";

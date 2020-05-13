@@ -426,30 +426,30 @@ DQ
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="is7-1H-SH5">
-                                        <rect key="frame" x="0.0" y="80" width="410" height="40"/>
+                                        <rect key="frame" x="0.0" y="80" width="303" height="40"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sTO-uC-WWL">
-                                                <rect key="frame" x="-2" y="4" width="41" height="36"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="􀆜" allowsEditingTextAttributes="YES" id="9YV-bu-Fw3">
+                                                <rect key="frame" x="-2" y="4" width="35" height="36"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="􀉀" allowsEditingTextAttributes="YES" id="9YV-bu-Fw3">
                                                     <font key="font" size="30" name="SFCompactDisplay-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tv7-QN-jqy">
-                                                <rect key="frame" x="52" y="0.0" width="358" height="40"/>
+                                                <rect key="frame" x="46" y="0.0" width="257" height="40"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gGb-lW-mjJ">
-                                                        <rect key="frame" x="-2" y="24" width="142" height="16"/>
-                                                        <textFieldCell key="cell" enabled="NO" title="Functional Backspace" id="dtJ-xi-2ZR">
+                                                        <rect key="frame" x="-2" y="24" width="58" height="16"/>
+                                                        <textFieldCell key="cell" enabled="NO" title="Blacklist" id="dtJ-xi-2ZR">
                                                             <font key="font" metaFont="systemSemibold" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-tN-80t">
-                                                        <rect key="frame" x="-2" y="0.0" width="362" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="charWrapping" enabled="NO" title="If you mistype a key longer than 1 letter, just use backspace." id="JEO-L4-6Ff">
+                                                        <rect key="frame" x="-2" y="0.0" width="261" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="charWrapping" enabled="NO" title="Disable Keys on whichever sites you prefer." id="JEO-L4-6Ff">
                                                             <font key="font" metaFont="systemLight" size="13"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
