@@ -22,6 +22,10 @@ final class SecondaryViewController: NSViewController {
     /// Parent window controller
     weak var windowController: OnboardingWindowController?
 
+    override func viewDidAppear() {
+        self.view.window!.preventsApplicationTerminationWhenModal = false
+    }
+
     @IBAction func didTapVideoTutorial(_ sender: Any) {
         NSWorkspace.shared.open(NSURL(string: "https://youtu.be/CQD_Lh503hI")! as URL)
     }
@@ -35,6 +39,7 @@ final class SecondaryViewController: NSViewController {
     }
 
     @IBAction func openSafariExtensionPreferences(_ sender: Any) {
+        windowController?.dismissController(self)
         windowController?.close()
 
         SFSafariApplication.showPreferencesForExtension(withIdentifier: "shockerella.Keys.Extension") { error in
