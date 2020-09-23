@@ -23,7 +23,9 @@ var permutations;
 var scrollPositionWhenActivated;
 var preferredActivationKey;
 var shouldStealFocus;
+var modifierEnabled;
 var blacklist = [];
+var originalEventUsedMetaKey;
 
 // get user's defaults/preferences.
 safari.extension.dispatchMessage("refreshPreferences");
@@ -51,9 +53,11 @@ function isBlacklisted(url) {
     return false
 }
 
-$("html").on("keypress", function (activationEvent) {
-    if (!keysCurrentlyActive && upSinceDeactivation && activationEvent.key.toUpperCase() == preferredActivationKey  && activationEvent.target.nodeName != "INPUT" && activationEvent.target.nodeName != "TEXTAREA" && !activationEvent.target.isContentEditable && !activationEvent.metaKey && !activationEvent.ctrlKey && !activationEvent.altKey && !activationEvent.altGraphKey && !isBlacklisted(window.location.hostname)) {
+$("html").on("keydown", function (activationEvent) {
+    if (!keysCurrentlyActive && upSinceDeactivation && activationEvent.key.toUpperCase() == preferredActivationKey  && activationEvent.target.nodeName != "INPUT" && activationEvent.target.nodeName != "TEXTAREA" && !activationEvent.target.isContentEditable && (!activationEvent.metaKey || modifierEnabled) && !activationEvent.ctrlKey && !activationEvent.altKey && !activationEvent.altGraphKey && !isBlacklisted(window.location.hostname)) {
         deactivate();
+        activationEvent.preventDefault();
+        originalEventUsedMetaKey = activationEvent.metaKey;
         keysCurrentlyActive = true;
         upSinceDeactivation = false;
         $("html").attr("key_commands_were_activated", "true");
@@ -659,17 +663,21 @@ const mouseClickEvents = ["mousedown", "click", "mouseup", "focus"];
 
 function simulateMouseClick(element){
     resetAllInputValues();
-    var closest = $(element).closest("a, button, [role='button'], [role='link'], [role='tab'], [role='option'], [role='menuitem'], input")[0];
-    mouseClickEvents.forEach(mouseEventType =>
-        element.dispatchEvent(
-          new MouseEvent(mouseEventType, {
-              view: window,
-              bubbles: true,
-              cancelable: true,
-              buttons: 1
-          })
-        )
-    );
+    var href = String($(element).closest("a, button, [role='button'], [role='link'], [role='tab'], [role='option'], [role='menuitem'], input").prop("href"));
+    if (!originalEventUsedMetaKey) {
+        mouseClickEvents.forEach(mouseEventType =>
+            element.dispatchEvent(
+              new MouseEvent(mouseEventType, {
+                  view: window,
+                  bubbles: true,
+                  cancelable: true,
+                  buttons: 1
+              })
+            )
+        );
+    } else {
+        safari.extension.dispatchMessage("metaOpen", {"url": href})
+    }
     $("html").one("keyup", function(){
         upSinceDeactivation=true;
     })
@@ -701,9 +709,9 @@ safari.self.addEventListener("message", handleMessage);
 
 function handleMessage(event) {
     shouldStealFocus = event.message.shouldStealFocus;
+    modifierEnabled = event.message.enableModifier;
     preferredActivationKey = event.message.currentKey;
     blacklist = event.message.blacklist;
-    console.log(blacklist)
 }
 
 function resetAllInputValues() {

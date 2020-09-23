@@ -27,18 +27,36 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBOutlet weak var modifierCheckbox: NSButton!
+
+    @IBAction func modifierCheckboxPressed(_ sender: Any) {
+        if focusCheckbox!.state == .on {
+            defaults?.set(true, forKey: "enableModifier")
+        } else {
+            defaults?.set(false, forKey: "enableModifier")
+        }
+    }
+
     override func viewDidAppear() {
         defaults!.register(defaults: ["activationKey": "G"])
         defaults!.register(defaults: ["shouldStealFocus": true])
+        defaults!.register(defaults: ["enableModifier": false])
         // set the keycap's label and the label adjacent to the reset button to match the user's stored preference.
         customActivationKey.stringValue = defaults!.string(forKey: "activationKey")!
         secondaryLabelForCustomActivationKey.stringValue = customActivationKey.stringValue
-        // set the checkbox's state to match the user's stored preference.
+        // set the checkboxes's states to match the user's stored preference.
         if (defaults?.bool(forKey: "shouldStealFocus"))! {
             focusCheckbox.state = .on
         } else {
             focusCheckbox.state = .off
         }
+        if (defaults?.bool(forKey: "enableModifier"))! {
+            modifierCheckbox.state = .on
+        } else {
+            modifierCheckbox.state = .off
+        }
+        // set modifier's text to match curren key.
+        modifierCheckbox.title = "Enable ⌘\(customActivationKey.stringValue) to open background tab"
         self.customActivationKey.focusRingType = NSFocusRingType.none
         self.view.window?.isMovableByWindowBackground = true
         customActivationKey.customizeCursorColor(NSColor.clear)
@@ -91,6 +109,8 @@ extension ViewController: NSTextFieldDelegate {
         string = self.customActivationKey.stringValue
         secondaryLabelForCustomActivationKey.stringValue = string
         defaults!.set(string, forKey: "activationKey")
+        // set modifier's text to match curren key.
+        modifierCheckbox.title = "Enable ⌘\(customActivationKey.stringValue) to open background tab"
         self.customActivationKey.moveToEndOfDocument(nil)
     }
 }

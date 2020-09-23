@@ -17,14 +17,25 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         defaults!.register(defaults: ["blacklist": [String]()])
         let defaultKey = defaults!.string(forKey: "activationKey") ?? "G"
         let defaultPreferenceForFocusStealing = defaults?.bool(forKey: "shouldStealFocus") as Any
+        let defaultPreferenceForEnablingModifierKey = defaults?.bool(forKey: "enableModifier") as Any
         let blacklist = (defaults?.array(forKey: "blacklist") as? [String])?.filter({!$0.isEmpty}) ?? [String]()
-        let userInfo = [
+        let preferences = [
             "currentKey": defaultKey,
             "shouldStealFocus": defaultPreferenceForFocusStealing,
+            "enableModifier": defaultPreferenceForEnablingModifierKey,
             "blacklist": blacklist
         ]
         if messageName == "refreshPreferences" {
-            page.dispatchMessageToScript(withName: "updateOfPreferences", userInfo: userInfo)
+            page.dispatchMessageToScript(withName: "updateOfPreferences", userInfo: preferences)
+        }
+        if messageName == "metaOpen" {
+            let value = userInfo!["url"]
+            if let string = value as? String {
+                let url = URL(string: string)!
+                SFSafariApplication.getActiveWindow { activeWindow in
+                    activeWindow?.openTab(with: url, makeActiveIfPossible: false)
+                }
+            }
         }
     }
 }
