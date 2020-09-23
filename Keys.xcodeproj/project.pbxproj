@@ -10,7 +10,6 @@
 		CB31F70B246A751200AE1F8B /* Blacklist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB31F70D246A751200AE1F8B /* Blacklist.storyboard */; };
 		CB93708E2460AA0F00ACD6DE /* BlackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB93708D2460AA0F00ACD6DE /* BlackListViewController.swift */; };
 		CB9370922460B69E00ACD6DE /* BlackListWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9370912460B69E00ACD6DE /* BlackListWindowController.swift */; };
-		CBA443EF235E4D94006FB35A /* Keys.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = CBA443EE235E4D94006FB35A /* Keys.entitlements */; };
 		CBA443F1235E4D94006FB35A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA443F0235E4D94006FB35A /* AppDelegate.swift */; };
 		CBA443F4235E4D94006FB35A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA443F2235E4D94006FB35A /* Main.storyboard */; };
 		CBA443F6235E4D94006FB35A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA443F5235E4D94006FB35A /* ViewController.swift */; };
@@ -76,15 +75,15 @@
 		CBA4441C235E4E2A006FB35A /* keystyles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = keystyles.css; sourceTree = "<group>"; };
 		CBA4441E235E4E37006FB35A /* tether.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tether.js; sourceTree = "<group>"; };
 		CBA44420235E4E44006FB35A /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
-		CBD0C3E623EA41340028DBC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Keys/Base.lproj/Onboarding.storyboard; sourceTree = SOURCE_ROOT; };
-		CBD0C3E823EA41FF0028DBC2 /* OnboardingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingWindowController.swift; path = Keys/OnboardingWindowController.swift; sourceTree = SOURCE_ROOT; };
+		CBD0C3E623EA41340028DBC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Keys/Onboarding/Base.lproj/Onboarding.storyboard; sourceTree = SOURCE_ROOT; };
+		CBD0C3E823EA41FF0028DBC2 /* OnboardingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingWindowController.swift; path = Keys/Onboarding/OnboardingWindowController.swift; sourceTree = SOURCE_ROOT; };
 		CBEF116023FAA69400F89198 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		CBEF116423FAA69700F89198 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		CBEF116623FAA6BE00F89198 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		CBF96AEF246B83AD0076050B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = ../fr.lproj/Onboarding.strings; sourceTree = "<group>"; };
-		CBF96AF1246B83AF0076050B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = ../de.lproj/Onboarding.strings; sourceTree = "<group>"; };
-		CBF96AF3246B83B10076050B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ../ja.lproj/Onboarding.strings; sourceTree = "<group>"; };
-		CBF96AF5246B83B40076050B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = ../es.lproj/Onboarding.strings; sourceTree = "<group>"; };
+		CBF96AEF246B83AD0076050B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Onboarding.strings; sourceTree = "<group>"; };
+		CBF96AF1246B83AF0076050B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Onboarding.strings; sourceTree = "<group>"; };
+		CBF96AF3246B83B10076050B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Onboarding.strings; sourceTree = "<group>"; };
+		CBF96AF5246B83B40076050B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Onboarding.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +227,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Patrick Botros";
 				TargetAttributes = {
 					CBA443EA235E4D94006FB35A = {
@@ -267,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBA443EF235E4D94006FB35A /* Keys.entitlements in Resources */,
 				CBD0C3E723EA41340028DBC2 /* Onboarding.storyboard in Resources */,
 				CB31F70B246A751200AE1F8B /* Blacklist.storyboard in Resources */,
 				CBA443F8235E4D94006FB35A /* Assets.xcassets in Resources */,
@@ -408,6 +406,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -469,6 +468,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
