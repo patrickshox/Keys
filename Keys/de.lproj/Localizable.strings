@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Keys
+
+  Created by Patrick Botros on 9/24/20.
+  Copyright © 2020 Patrick Botros. All rights reserved.
+*/
+
+"enableModifier" = "Aktivieren Sie ⌘%@, um die Registerkarte Hintergrund zu öffnen";

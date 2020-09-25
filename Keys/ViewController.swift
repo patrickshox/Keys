@@ -56,7 +56,9 @@ class ViewController: NSViewController {
             modifierCheckbox.state = .off
         }
         // set modifier's text to match curren key.
-        modifierCheckbox.title = "Enable ⌘\(customActivationKey.stringValue) to open background tab"
+        let localizedString = NSLocalizedString("enableModifier", comment: "")
+        let interpolatedString = String(format: localizedString, customActivationKey.stringValue)
+        modifierCheckbox.title = interpolatedString
         self.customActivationKey.focusRingType = NSFocusRingType.none
         self.view.window?.isMovableByWindowBackground = true
         customActivationKey.customizeCursorColor(NSColor.clear)
@@ -110,7 +112,9 @@ extension ViewController: NSTextFieldDelegate {
         secondaryLabelForCustomActivationKey.stringValue = string
         defaults!.set(string, forKey: "activationKey")
         // set modifier's text to match curren key.
-        modifierCheckbox.title = "Enable ⌘\(customActivationKey.stringValue) to open background tab"
+        let localizedString = NSLocalizedString("enableModifier", comment: "")
+        let interpolatedString = String(format: localizedString, customActivationKey.stringValue)
+        modifierCheckbox.title = interpolatedString
         self.customActivationKey.moveToEndOfDocument(nil)
     }
 }
