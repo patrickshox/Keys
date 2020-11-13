@@ -37,13 +37,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="321"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeM-mp-SoC">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeM-mp-SoC">
                                 <rect key="frame" x="20" y="100" width="440" height="148"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="95i-tj-bgg">
                                     <rect key="frame" x="0.0" y="0.0" width="440" height="148"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="28" rowSizeStyle="automatic" headerView="vpa-iu-EId" viewBased="YES" id="VyN-OY-OuF" customClass="GridClipTableView" customModule="Keys" customModuleProvider="target">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" rowSizeStyle="automatic" headerView="vpa-iu-EId" viewBased="YES" id="VyN-OY-OuF" customClass="GridClipTableView" customModule="Keys" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="440" height="123"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -64,11 +64,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="WebsiteCellReuseID" id="5V0-T7-wbW" customClass="WebsiteCell" customModule="Keys" customModuleProvider="target">
-                                                            <rect key="frame" x="11" y="1" width="417" height="28"/>
+                                                            <rect key="frame" x="11" y="1" width="347" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" id="RMH-L1-Q6O" customClass="RowedLabel" customModule="Keys" customModuleProvider="target">
-                                                                    <rect key="frame" x="-2" y="3" width="441" height="22"/>
+                                                                    <rect key="frame" x="0.0" y="3" width="437" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" placeholderString="Type a site here (Examples: twitter, facebook.com, mail.google, ...)" id="6rl-jZ-au6">
                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -92,8 +92,8 @@
                                     </subviews>
                                     <nil key="backgroundColor"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="bk6-6Z-Q3O">
-                                    <rect key="frame" x="1" y="168" width="286" height="16"/>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="bk6-6Z-Q3O">
+                                    <rect key="frame" x="0.0" y="132" width="371" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Vsw-gj-XHF">
@@ -155,7 +155,7 @@
                 </viewController>
                 <customObject id="iHq-pV-qZT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="519"/>
+            <point key="canvasLocation" x="68" y="518.5"/>
         </scene>
     </scenes>
     <resources>
