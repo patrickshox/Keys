@@ -166,36 +166,25 @@
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K8M-CU-4Mc">
-                                        <rect key="frame" x="139" y="244" width="171" height="16"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yhe-dk-1tP">
-                                                <rect key="frame" x="-2" y="-1" width="173" height="18"/>
-                                                <buttonCell key="cell" type="check" title="Take focus on page load" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Q3x-aF-1zt">
-                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="focusCheckboxPressed:" target="XfG-lQ-9wD" id="8NN-0l-7hN"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yhe-dk-1tP">
+                                        <rect key="frame" x="137" y="243" width="173" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Take focus on page load" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Q3x-aF-1zt">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="focusCheckboxPressed:" target="XfG-lQ-9wD" id="8NN-0l-7hN"/>
+                                        </connections>
+                                    </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nOv-uS-aW5">
                                         <rect key="frame" x="103" y="185" width="241" height="18"/>
                                         <buttonCell key="cell" type="check" title="Enable ⌘G to open background tab" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Wep-DU-l7d">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <connections>
+                                                <action selector="modifierCheckboxPressed:" target="XfG-lQ-9wD" id="k1v-Mi-bPg"/>
+                                            </connections>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="modifierCheckboxPressed:" target="XfG-lQ-9wD" id="rzt-06-k0Z"/>
-                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-WV-EJV">
                                         <rect key="frame" x="70" y="117" width="310" height="32"/>
@@ -264,7 +253,7 @@
                     <connections>
                         <outlet property="customActivationKey" destination="kSm-hc-Al0" id="1ha-PN-hay"/>
                         <outlet property="focusCheckbox" destination="Yhe-dk-1tP" id="Xvo-f2-i6C"/>
-                        <outlet property="modifierCheckbox" destination="nOv-uS-aW5" id="Zcj-zu-Dg1"/>
+                        <outlet property="modifierCheckbox" destination="nOv-uS-aW5" id="NoU-r4-Aq0"/>
                         <outlet property="secondaryLabelForCustomActivationKey" destination="Txa-Om-n4G" id="Xfy-YI-g0S"/>
                     </connections>
                 </viewController>

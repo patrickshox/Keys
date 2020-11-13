@@ -30,7 +30,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var modifierCheckbox: NSButton!
 
     @IBAction func modifierCheckboxPressed(_ sender: Any) {
-        if focusCheckbox!.state == .on {
+        if modifierCheckbox!.state == .on {
             defaults?.set(true, forKey: "enableModifier")
         } else {
             defaults?.set(false, forKey: "enableModifier")

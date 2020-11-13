@@ -14,7 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var windowController: OnboardingWindowController?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        UserDefaults.standard.set(false, forKey: "didShowTutorial")
         if UserDefaults.standard.bool(forKey: "didShowTutorial") {
         } else {
             if windowController == nil {

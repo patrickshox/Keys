@@ -14,6 +14,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String: Any]?) {
         defaults!.register(defaults: ["activationKey": "G"])
         defaults!.register(defaults: ["shouldStealFocus": true])
+        defaults!.register(defaults: ["enableModifier": false])
         defaults!.register(defaults: ["blacklist": [String]()])
         let defaultKey = defaults!.string(forKey: "activationKey") ?? "G"
         let defaultPreferenceForFocusStealing = defaults?.bool(forKey: "shouldStealFocus") as Any
