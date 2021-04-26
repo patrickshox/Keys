@@ -561,6 +561,7 @@ function siteSpecificModifications() {
         $(".ytp-chrome-bottom").addClass("Keys-Show-While-Active");
         $("ytd-menu-renderer").addClass("Keys-Show-While-Active");
         $(".yt-img-shadow").addClass("Keys-Container-of-Large-Image");
+        $(".faux").removeClass("is-empty")
     }
     if (window.location.hostname === "www.msn.com" || $("html").hasClass("gr__msn_com")) {
         $("li.popularnow li .faux, li.popularnow li .faux .Keys-Character").css("font-size", "12px");
